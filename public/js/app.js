@@ -604,13 +604,12 @@ function closeModal(modalId) {
     const modal = document.getElementById(modalId);
     if (!modal) return;
     modal.classList.remove('show');
-    setTimeout(() => {
-        modal.style.display = 'none';
-        // Reset form jika modal locationModal
-        if (modalId === 'locationModal') {
-            resetForm();
-        }
-    }, 300);
+    // Langsung display none tanpa delay
+    modal.style.display = 'none';
+    // Reset form jika modal locationModal
+    if (modalId === 'locationModal') {
+        resetForm();
+    }
 }
 
 // Reset Form
