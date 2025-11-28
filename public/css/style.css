@@ -172,6 +172,15 @@ body {
     margin-left: -320px;
 }
 
+.main-container.sidebar-hidden .map-section {
+    width: 100%;
+    flex: 1;
+}
+
+.main-container.sidebar-hidden {
+    width: 100%;
+}
+
 .sidebar-toggle {
     display: none;
     position: fixed;

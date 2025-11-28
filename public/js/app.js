@@ -390,6 +390,10 @@ function initEventListeners() {
         const mainContainer = document.querySelector('.main-container');
         sidebar.classList.toggle('collapsed');
         mainContainer.classList.toggle('sidebar-hidden');
+        // Trigger map resize after animation
+        setTimeout(() => {
+            if (map) map.invalidateSize();
+        }, 350);
     });
     
     // Sidebar Close Button
@@ -398,6 +402,10 @@ function initEventListeners() {
         const mainContainer = document.querySelector('.main-container');
         sidebar.classList.add('collapsed');
         mainContainer.classList.add('sidebar-hidden');
+        // Trigger map resize after animation
+        setTimeout(() => {
+            if (map) map.invalidateSize();
+        }, 350);
     });
     
     // Close sidebar when clicking overlay (mobile)
