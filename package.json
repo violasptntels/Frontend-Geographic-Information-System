@@ -1,0 +1,18 @@
+{
+  "name": "gis-frontend",
+  "version": "1.0.0",
+  "description": "Frontend untuk Aplikasi Geographic Information System dengan LeafletJS",
+  "main": "public/index.html",
+  "scripts": {
+    "dev": "npx http-server public -p 3000",
+    "build": "echo 'Frontend is static - no build needed'",
+    "deploy:pages": "git subtree split --prefix public -b gh-pages && git push -u origin gh-pages && git branch -D gh-pages"
+  },
+  "keywords": ["leaflet", "gis", "frontend"],
+  "author": "violasptntels",
+  "license": "ISC",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
+
